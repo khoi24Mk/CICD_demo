@@ -1,10 +1,14 @@
 #!bin/bash
 
 Sum: main.o sum.o
-	g++  main.o sum.o
+	gcc  main.o sum.o
 
-sum.o: sum.cpp
-	g++ -c sum.cpp
+sum.o: sum.c
+	gcc -c sum.c
 
-main.o: main.cpp
-	g++ -c main.cpp
+main.o: main.c
+	gcc -c main.c
+
+clean:
+	rm -f *.o *.out
+
